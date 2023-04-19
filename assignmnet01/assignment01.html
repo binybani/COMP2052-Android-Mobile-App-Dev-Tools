@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beanie Yubin Kim</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery Library goes first - before any other scripts that reqire jQuery -->
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js" defer=""></script>
+  <script src="js/pop-up.js" defer="defer"></script>
+  <script src="js/dice-game.js" defer="defer"></script>
+  <script src="js/accordion.js" defer="defer"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1 class="assignment">Dice Game - Beanie Kim</h1>
+    </header>
+    <main>
+      <section id="container">
+        <article class="play-board">
+          <div class="player-section">
+            <div class="dice-ground">
+              <img id="compDice1" src="img/dice-1.png" alt="dice side 1">
+              <img id="compDice2" src="img/dice-1.png" alt="dice side 6">
+            </div>
+            <div class="player">
+              <img id="cats-paw" src="img/paw.png" alt="cats paw">
+            </div>
+          </div><!-- end computer player -->
+          <div class="player-section">
+            <h2>VS</h2>
+          </div><!-- end gap -->
+          <div class="player-section">
+            <div class="dice-ground">
+              <img id="userDice1" src="img/dice-1.png" alt="dice side 1">
+              <img id="userDice2" src="img/dice-1.png" alt="dice side 6">
+            </div>
+            <div class="player">
+              <img id="cats-eyes" src="img/eye-open.png" alt="cat eyes">
+            </div>
+          </div><!-- end user player -->
+          <div class="player-section">
+            <div class="score-board">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow" colspan="2">Computer Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">Score the Round</td>
+                    <td class="tg-c3ow">&nbsp;Total &nbsp; Scoure &nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-c3ow"><span id="comp-score-round" style="font-weight:bold">0</span></td>
+                    <td class="tg-c3ow"><span id="comp-total-round" style="font-weight:bold">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- end your score board -->
+            <div class="score-board">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow" colspan="2">Your Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-c3ow">Score the Round</td>
+                    <td class="tg-c3ow">&nbsp;Total &nbsp; Scoure &nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-c3ow"><span id="user-score-round" style="font-weight:bold">0</span></td>
+                    <td class="tg-c3ow"><span id="user-total-round" style="font-weight:bold">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- end computer score board -->
+          </div>
+          <div id="btn_fieldset">
+            <button id="btn-roll-dice">Roll Dice</button>
+            <button id="btn-new-game">New Game</button>
+          </div><!-- end button field -->
+
+          <div class="accordion">
+            <div class="accordion-container accordion-container-01">
+              <h4 class="tab">How to Play <span>&#9662;</span> </h4>
+              <div class="content">
+                <ul>
+                  <li>To start, click the 'Roll Dice' button.</li>
+                  <li>To advance to the next round, clikc the 'Roll Dice' button again.</li>
+                  <li>After three rounds, the game is over and the final scoure is calculated.</li>
+                  <li>If you want to play agian, click the 'New Gaem' button or refresh the page.</li>
+                </ul>
+              </div><!-- end content -->
+            </div><!-- end accoridion-container -->
+            <div>
+              <h4 class="tab">Rules <span>&#9662;</span> </h4>
+              <div class="content">
+                <ul>
+                  <li>Each round, you and the computer both roll a pair of dice.</li>
+                  <li>Your score for that round will be based on the sum of the dice.</li>
+                  <li>If you roll doubles (e.g. a 3 and a 3) then your score is mutiplied by 2.</li>
+                  <li>Rolling a 1 will give you a score of 0 for that round.</li>
+                  <li>The player who has the most points at the end of three rounds is the winnter.</li>
+                </ul>
+              </div><!-- end content -->
+            </div><!-- end accoridion-container -->
+          </div><!-- end accordion -->
+          <aside id="game-over">
+            <h2>Game Over</h2>
+            <p id="final-result"></p>
+            <button id="btn-close-pop-up">OK</button>
+          </aside><!-- end the popup -->
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright 2023. Yubin Kim. All Rights Reserved.</p>
+    </footer><!-- end footer -->
+  </div>
+</body>
+
+</html>
