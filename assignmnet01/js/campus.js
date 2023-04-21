@@ -9,14 +9,20 @@ class Campus {
   }
   // describe campus object
   describeSelf() {
-    // make the first letter in uppercase
     let returnString = `<h3 class="bold">${this.name} Campus</h3>`;
-    returnString += `<p class="bold"> Address: ${this.address}</p>`;
-    returnString += `<p> Short Description: ${this.description}</p>`;
+    returnString += `<p><span class="bold">Address:</span> ${this.address}</p>`;
+    returnString += `<p><span class="bold">Short Description:</span> ${this.description}</p>`;
     returnString += `<a href="${this.link}" alt="${this.name} Campus link">${this.name} Campus link</a>`;
     return returnString;
   }
 }
+
+const burnaby = new Campus(
+  "Burnaby",
+  "3700 Willingdon Avenue Burnaby, BC V5G 3H2",
+  "The largest BCIT campus is home to hundreds of specialized learning spaces, including classrooms, shops, labs, simulators, broadcast studios, green roofs, energy grids, forests, and waterways.",
+  "https://www.bcit.ca/about/visit/campuses-directions/burnaby/"
+);
 
 const downtown = new Campus(
   "Downtown",
@@ -25,18 +31,11 @@ const downtown = new Campus(
   "https://www.bcit.ca/sustainability/operations/buildings/downtown-campus/"
 );
 
-const burnaby = new Campus(
-  "Burnaby",
-  "265 W Esplanade, North Vancouver, BC V7M 1A5",
-  "The largest BCIT campus is home to hundreds of specialized learning spaces, including classrooms, shops, labs, simulators, broadcast studios, green roofs, energy grids, forests, and waterways.",
-  "https://www.bcit.ca/about/visit/campuses-directions/burnaby/"
-);
-
 const marine = new Campus(
   "Marine",
-  "3700 Willingdon Avenue Burnaby, BC V5G 3H2",
+  "265 W Esplanade, North Vancouver, BC V7M 1A5",
   " We offer programs in navigation, marine engineering, seamanship, and maritime safety and security.",
-  "https://www.bcit.ca/about/visit/campuses-directions/burnaby/"
+  "https://www.bcit.ca/about/visit/campuses-directions/marine/"
 );
 
 const aerospaceTechnology = new Campus(

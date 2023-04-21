@@ -1,39 +1,47 @@
 // Html Elements
 const mapPosition = document.getElementById("map");
 const logo = document.getElementById("logo");
-
 const info = document.getElementById("info");
+
+// Hide google map
 mapPosition.style.display = "none";
-// Initiate map and marker
+
+// Declare map and marker variable
 let map, marker;
 
 // Initialize and add the map
 function initMap() {
-  // The map, centered at DT campus
+  // The map, centered at Burnaby campus
   map = new google.maps.Map(mapPosition, {
     zoom: 16,
     center: burnaby,
   });
-  // The marker, positioned DT campus
+
+  // The marker, positioned Burnaby campus
   marker = new google.maps.Marker({
     position: burnaby,
     map: map,
   });
 }
 
-// move new location
+// Move new location
 function moveToLocation(lat, lng) {
   var center = new google.maps.LatLng(lat, lng);
   map.panTo(center);
   marker.setPosition(center);
 }
 
-// change campus location
+// Change campus location
 const changeCampus = (target) => {
   const value = target.value;
+
+  // Remove logo when user select the campus
   logo.style.display = "none";
+
+  // Display google map
   mapPosition.style.display = "block";
 
+  // change the map center depend on user selection
   if (value == "burnaby") {
     moveToLocation(49.249011630001974, -123.00187775720289);
     info.innerHTML = burnaby.describeSelf();
@@ -49,6 +57,5 @@ const changeCampus = (target) => {
   } else if (value == "annacisIsland") {
     moveToLocation(49.16363249958349, -122.9700808306861);
     info.innerHTML = annacisIsland.describeSelf();
-  } else {
   }
 };
