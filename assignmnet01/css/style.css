@@ -40,93 +40,6 @@ iframe {
 End Reset Styles
 --------------
 */
-/*
------------------------
-Accordion Tabs Styles 
------------------------
-*/
-.accordion {
-  grid-column: 3/24;
-  padding: 8px;
-  max-width: 800px;
-  text-align: center;
-}
-.accordion .tab {
-  border-bottom: 1px solid #004d57;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin: 0;
-  line-height: 1;
-}
-.accordion p {
-  margin: 0;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* 
---------------------------------------------------
-End Accordion Tabs Styles 
---------------------------------------------------
-*/
-/*
------------------------
-Pop-Up Styles 
------------------------
-*/
-#game-over {
-  position: absolute;
-  left: 37.5%;
-  top: 30%;
-  grid-column: 4/8;
-  background-color: #fff6f6;
-  padding: 15px;
-  box-shadow: 5px 5px 5px 5px grey;
-  border-radius: 15px;
-  border: solid 5px #FFB100;
-  width: 20%;
-  text-align: center;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 3s; /* Safari and Chrome */
-  -o-animation: fadein 3s; /* Opera */
-}
-#game-over p {
-  text-align: center;
-  font-size: 1.3em;
-  margin: 5px;
-  padding: 5px;
-}
-#game-over button {
-  background-color: #FFB100;
-  color: black;
-  border: solid 2px #FFB100;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#game-over button {
-  margin: 5px;
-  box-shadow: 1px 1px 1px 1px grey;
-}
-
-/*
------------------------
-End Pop-Up Styles 
------------------------
-*/
 body {
   font-size: 12px;
   color: #333;
@@ -202,27 +115,13 @@ footer p {
   padding: auto;
 }
 
-button {
-  color: #ffffff;
-  border-radius: 5px;
-  border-style: outset;
-  background-color: #4e5283;
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px;
-}
-
-button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.assignment {
+.title {
   text-align: center;
   padding: 20px;
 }
 
 #wrapper {
+  font-family: "Ubuntu", sans-serif;
   width: 100%;
   height: 100%;
   max-width: 1200px;
@@ -234,219 +133,17 @@ button:hover {
   text-align: center;
 }
 
-#container {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-auto-rows: minmax(auto, auto);
-  margin: 10px;
-  padding: 10px;
+select {
+  border-radius: 5px;
 }
 
-/* Play Board */
-.play-board {
-  grid-column: 2/20;
-  border: solid black;
-  padding: 10px;
-  border-radius: 15px;
-  border-style: outset;
-  background-color: #ffffff;
-  box-shadow: 5px 5px 5px 5px grey;
-  display: grid;
-  grid-template-columns: repeat(25, 1fr);
+label {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: right;
 }
 
-.player-section {
-  margin: 10px;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-.player-section h2 {
-  grid-column: 1/6;
-}
-
-.player-section:first-child {
-  grid-column: 2/11;
-}
-.player-section:first-child .dice-ground {
-  margin-bottom: 10%;
-}
-.player-section:first-child .player {
-  min-height: 300px;
-  background: url("../img/computer.png") no-repeat center;
-  background-size: contain;
-}
-
-.player-section:nth-child(2) {
-  margin-top: 150%;
-  grid-column: 12/15;
-}
-
-.player-section:nth-child(3) {
-  grid-column: 16/25;
-}
-.player-section:nth-child(3) .player {
-  min-height: 300px;
-  background: url("../img/cats.png") no-repeat center;
-  background-size: contain;
-}
-
-.player-section:nth-child(4) {
-  grid-column: 2/25;
-  margin: 5px;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-}
-
-/* Score Board */
-.score-board {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-}
-
-.score-board:first-child {
-  grid-column: 1/2;
-}
-
-.score-board:nth-child(2) {
-  grid-column: 2/3;
-}
-
-/* Dice Ground */
-.dice-ground {
-  grid-column: 1/6;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-.dice-ground img:first-child {
+#map {
   width: 100%;
-  grid-column: 2/4;
-}
-.dice-ground img:nth-child(2) {
-  width: 100%;
-  grid-column: 5/7;
-}
-
-.player {
-  grid-column: 1/6;
-  margin: 5px;
-  padding: 5px;
-}
-.player #cats-paw {
-  display: none;
-  margin-top: 15%;
-  margin-left: 30%;
-}
-.player #cats-eyes {
-  margin-top: 60%;
-}
-
-/* Score Table */
-.tg {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.tg td {
-  border: solid 3px black;
-  border-radius: 10%;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-  font-size: 1.2em;
-  font-weight: 700;
-}
-.tg th {
-  font-size: 2em;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-.tg .tg-c3ow {
-  border-color: inherit;
-  text-align: center;
-  vertical-align: top;
-}
-.tg .tg-0pky {
-  border-color: inherit;
-  text-align: left;
-  vertical-align: top;
-}
-
-.score-board:first-child > .tg {
-  grid-column: 1/9;
-}
-
-.score-board:nth-child(2) > .tg {
-  grid-column: 3/11;
-}
-
-/* Roll dice and New game button vield */
-#btn_fieldset {
-  grid-column: 2/25;
-}
-
-@keyframes blink-effect {
-  50% {
-    opacity: 0;
-  }
-}
-.blink {
-  animation: blink-effect 1s step-end infinite;
-}
-
-/* Large devices (1024px and down) */
-@media only screen and (max-width: 1024px) {
-  .player #cats-paw {
-    margin-top: 25%;
-    margin-left: 27%;
-  }
-  .player #cats-eyes {
-    width: 75%;
-    margin-top: 65%;
-    margin-left: 5%;
-  }
-  #game-over {
-    width: 25%;
-  }
-}
-/* Medium devices (768px and down) */
-@media only screen and (max-width: 768px) {
-  .player-section:nth-child(1) .player {
-    min-height: 150px;
-  }
-  .player-section:nth-child(3) .player {
-    min-height: 150px;
-  }
-  .player #cats-paw {
-    width: 55%;
-    margin-top: 5%;
-    margin-left: 23%;
-  }
-  .player #cats-eyes {
-    width: 79%;
-    margin-top: 55%;
-    margin-left: 2%;
-  }
-  #game-over {
-    width: 31%;
-    left: 31.5%;
-  }
-}
-/* Small devices (600px and down) */
-@media only screen and (max-width: 600px) {
-  .player-section:nth-child(1) .player {
-    min-height: 120px;
-  }
-  .player-section:nth-child(3) .player {
-    min-height: 120px;
-  }
-  .player #cats-paw {
-    margin-top: 10%;
-  }
-  #game-over {
-    width: 40%;
-    left: 24.5%;
-  }
+  height: 30rem;
 }
