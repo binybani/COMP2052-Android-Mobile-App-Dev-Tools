@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Client-Server Web App</title>
+
+  <!-- CSS style sheet -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery Library goes first - before any other scripts that reqire jQuery -->
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js" defer=""></script>
+
+  <!-- Javascript -->
+  <script src="./js/assignment02.js" defer="defer"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h2 class="title">Client-Server Web App</h2>
+    </header>
+    <main class="container">
+      <section class="row">
+        <h3 class="m-2">Which fictional world would you want to live in?</h3>
+        <article class="col"></article>
+        <article class="col">
+          <form class="p-1 m-2" action="./php/store.php" method="post" data-ajax="false">
+            <div class="">
+              <div class="input-group m-2">
+                <label class="me-2" for="">Your Name:</label>
+                <input class="form-control rounded-3" type="text" name="user_name" placeholder="Type Your Name"
+                  style="width: 150px" />
+              </div>
+              <div class="input-group m-2">
+                <label class="me-2" for="">fictional world:</label>
+                <select name="select_world" class="form-select rounded-3">
+                  <option selected>Select Your World</option>
+                  <option value="Hogwarts">Hogwarts (Harry Potter)</option>
+                  <option value="Middle Earth">Middle Earth (Lord of the Rings)</option>
+                  <option value="Westeros">Westeros (Game of Thrones)</option>
+                  <option value="Narnia">Narnia (Chronicles of Narnia)</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <input class="p-2 m-1 rounded-3 submit-btn" type="submit" value="Submit" />
+            </div>
+          </form><!-- end submit form -->
+        </article>
+        <article class="col"></article>
+      </section><!-- end first section -->
+
+      <section class="row">
+        <h3>Data Retrieved</h3>
+        <article class="col"></article>
+        <article class="col">
+          <form class="p-1 m-2" action="./php/retrieve.php" method="post" data-ajax="false">
+            <input class="p-2 m-1 rounded-3 submit-btn" type="submit" value="Show Data">
+          </form><!-- end show data form -->
+        </article>
+        <article class="col"></article>
+      </section><!-- end second section -->
+    </main><!-- end main (container) section -->
+
+    <footer>
+      <p>Copyright 2023. Beanie Kim. All Rights Reserved.</p>
+    </footer><!-- end footer -->
+  </div><!-- end wrapper -->
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
