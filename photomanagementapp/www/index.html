@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Photo Management</title>
+
+    <!-- CSS styel sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Javascript -->
+    <script src="js/photo_management.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h2 class="title">Photo Management</h2>
+        </header>
+        <main>
+            <section class="container">
+                <article class="m-4">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn text-white" style="background-color: #4e5283;" onclick="takePicture()">Take a
+                            Photo</button>
+                        <button class="btn text-white" style="background-color: #4e5283;" onclick="saveImage()">Save</button>
+                    </div>
+                    <div>
+                        <img id="myImage" class="mx-auto d-block" src="img/cat.png" alt="" />
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn text-white" style="background-color: #4e5283;" onclick="selectFromGallery()">Select from
+                            Gallery</button>
+                    </div>
+                </article><!-- end article -->
+            </section><!-- end (container) section -->
+        </main><!-- end main -->
+        <footer>
+            <p>Copyright 2023. Beanie Kim. All Rights Reserved.</p>
+        </footer><!-- end footer -->
+    </div><!-- end wrapper -->
+
+</body>
+
+</html>

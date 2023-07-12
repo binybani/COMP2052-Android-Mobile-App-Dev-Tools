@@ -1,0 +1,35 @@
+{
+  "name": "ca.bcit.camp2052.a01173172.photomanagementapp",
+  "displayName": "PhotoManagementApp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^12.0.0",
+    "cordova-plugin-camera": "^6.0.0",
+    "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-save-image": "^0.3.0",
+    "cordova-plugin-save-image-gallery": "0.0.26"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-file": {},
+      "cordova-plugin-save-image": {},
+      "cordova-plugin-save-image-gallery": {}
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bouncing Ball Game</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- CSS styel sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="js/bouncingBallGame.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="wrapper">
+        <header>
+            <h2 class="title">Bouncing Ball Game</h2>
+        </header>
+        <main>
+            <section>
+                <article class="p-1 justify-content-center">
+                    <canvas id="canvas1"></canvas>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <button id="startButton" type="button" class="btn btn-lg"
+                            onclick="refreshGame()">Start!</button>
+                        <button id="endButton" type="button" class="btn btn-lg" onclick="gameOver()">End!</button>
+                    </div>
+                    <h3 class="m-2">Rules</h3>
+                    <div class="m-2">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. When the ball encounters a strawberry, it earns 5 points.
+                            </li>
+                            <li class="list-group-item">2. If the ball hits the wall, it loses 1 point.</li>
+                            <li class="list-group-item">3. When the ball hits the right or left wall, its diameter
+                                increases.</li>
+                            <li class="list-group-item">4. When the ball hits the top or bottom wall, its diameter
+                                decreases.</li>
+                            <li class="list-group-item">5. The game ends when the ball completely fills the canvas or
+                                disappears.</li>
+                            <li class="list-group-item">6. Try to score as many points as possible within 60 seconds!
+                            </li>
+                        </ul>
+                    </div>
+
+                </article><!-- end article -->
+            </section><!-- end (container) section -->
+        </main><!-- end main -->
+        <footer>
+            <p>Copyright 2023. Beanie Kim. All Rights Reserved.</p>
+        </footer><!-- end footer -->
+    </div><!-- end wrapper -->
+</body>
+
+</html>
