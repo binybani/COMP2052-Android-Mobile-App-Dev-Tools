@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Background Color Control App</string>
+    <string name="red_text">Red</string>
+    <string name="green_text">Green</string>
+    <string name="blue_text">Blue</string>
+
+</resources>
